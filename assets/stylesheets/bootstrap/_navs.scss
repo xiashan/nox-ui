@@ -1,0 +1,114 @@
+//
+// Navs
+// --------------------------------------------------
+
+$nav-tabs-border-width: 1px;
+$nav-tabs-border-color: $gray-bd;
+$nav-item-margin: 8px;
+$nav-link-padding: 16px;
+
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+//
+// Tabs
+//
+.nav-tabs {
+  font-size: 14px;
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .nav-item {
+    position: relative;
+    float: left;
+    // Make the list-items overlay the bottom border
+    margin-bottom: -$nav-tabs-border-width;
+
+    + .nav-item {
+      margin-left: $nav-item-margin;
+    }
+
+    &.active {
+      background-color: transparent;
+    }
+
+    .arrow {
+      &,
+      &:after {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+      }
+    }
+    .arrow {
+      border-width: 8px;
+      border-top-width: 0;
+      border-bottom-color: $nav-tabs-border-color;
+      left: 50%;
+      margin-left: -8px;
+      top: 38px;
+      display: none;
+    }
+    .arrow:after {
+      border-width: 7px;
+      content: " ";
+      top: 1px;
+      border-top-width: 0;
+      border-bottom-color: #fff;
+      margin-left: -7px;
+    }
+
+  }
+
+  .nav-link {
+    display: block;
+    color: $text-color-lighter;
+    padding: $nav-link-padding;
+    &:hover {
+      text-decoration: none;
+      color: $brand-primary;
+    }
+    //    border: $nav-tabs-border-width solid transparent;
+    //    @include border-top-radius($nav-tabs-border-radius);
+    //
+    //    @include hover-focus {
+    //      border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
+    //    }
+  }
+
+  .nav-item.active .nav-link {
+    color: $brand-primary;
+  }
+  .nav-item.active .arrow {
+    display: block;
+  }
+
+}
+
+
+//
+// Tabbable tabs
+//
+
+// Hide tabbable panes to start, show them when `.active`
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+    background-color: transparent;
+  }
+}
+
+

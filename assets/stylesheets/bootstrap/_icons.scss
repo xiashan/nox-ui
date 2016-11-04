@@ -1,0 +1,281 @@
+//
+@at-root {
+  // Import the fonts
+  @font-face {
+    font-family: 'icomoon';
+    src: url('#{$icon-font-path}#{$icon-font-name}.eot?ga1slg');
+    src: url('#{$icon-font-path}#{$icon-font-name}.eot?ga1slg#iefix') format('embedded-opentype'),
+         url('#{$icon-font-path}#{$icon-font-name}.ttf?ga1slg') format('truetype'),
+         url('#{$icon-font-path}#{$icon-font-name}.woff?ga1slg') format('woff'),
+         url('#{$icon-font-path}#{$icon-font-name}.svg?ga1slg#{$icon-font-svg-id}')) format('svg');
+  }
+}
+
+[class^="nox-"], [class*=" nox-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nox-googleplus:before {
+  content: "\e900";
+}
+.nox-twitter:before {
+  content: "\e901";
+}
+.nox-anchor:before {
+  content: "\e904";
+}
+.nox-android:before {
+  content: "\e905";
+}
+.nox-appplayer:before {
+  content: "\e906";
+}
+.nox-calendar:before {
+  content: "\e907";
+}
+.nox-carrot:before {
+  content: "\e908";
+}
+.nox-check-circle-o:before {
+  content: "\e909";
+}
+.nox-check-circle:before {
+  content: "\e90a";
+}
+.nox-check:before {
+  content: "\e90b";
+}
+.nox-checkbox-checked:before {
+  content: "\e90c";
+}
+.nox-checkbox:before {
+  content: "\e90d";
+}
+.nox-copy:before {
+  content: "\e90e";
+}
+.nox-document:before {
+  content: "\e90f";
+}
+.nox-dot:before {
+  content: "\e910";
+}
+.nox-download:before {
+  content: "\e911";
+}
+.nox-edit:before {
+  content: "\e912";
+}
+.nox-exclamation-circle-o:before {
+  content: "\e913";
+}
+.nox-exclamation-circle:before {
+  content: "\e914";
+}
+.nox-exclamation:before {
+  content: "\e915";
+}
+.nox-facebook:before {
+  content: "\e916";
+}
+.nox-forbid-circle-o:before {
+  content: "\e917";
+}
+.nox-gift:before {
+  content: "\e918";
+}
+.nox-grid-o:before {
+  content: "\e919";
+}
+.nox-heart-empty:before {
+  content: "\e91a";
+}
+.nox-heart-full:before {
+  content: "\e91b";
+}
+.nox-herb:before {
+  content: "\e91c";
+}
+.nox-info-circle-o:before {
+  content: "\e91d";
+}
+.nox-info-circle:before {
+  content: "\e91e";
+}
+.nox-info:before {
+  content: "\e91f";
+}
+.nox-loading:before {
+  content: "\e920";
+}
+.nox-lock-line:before {
+  content: "\e921";
+}
+.nox-logo-circle-o:before {
+  content: "\e922";
+}
+.nox-logo-circle:before {
+  content: "\e923";
+}
+.nox-logo:before {
+  content: "\e924";
+}
+.nox-mail-line:before {
+  content: "\e925";
+}
+.nox-mask:before {
+  content: "\e926";
+}
+.nox-menu:before {
+  content: "\e927";
+}
+.nox-message:before {
+  content: "\e928";
+}
+.nox-monitor:before {
+  content: "\e929";
+}
+.nox-more-circle-o:before {
+  content: "\e92a";
+}
+.nox-pcdownload:before {
+  content: "\e92b";
+}
+.nox-pcgame:before {
+  content: "\e92c";
+}
+.nox-phone-line:before {
+  content: "\e92d";
+}
+.nox-plane:before {
+  content: "\e92e";
+}
+.nox-play-circle-o:before {
+  content: "\e92f";
+}
+.nox-play-circle:before {
+  content: "\e930";
+}
+.nox-play:before {
+  content: "\e931";
+}
+.nox-plus-circle-o:before {
+  content: "\e932";
+}
+.nox-plus-circle:before {
+  content: "\e933";
+}
+.nox-plus:before {
+  content: "\e934";
+}
+.nox-porker:before {
+  content: "\e935";
+}
+.nox-qq:before {
+  content: "\e936";
+}
+.nox-question-circle-o:before {
+  content: "\e937";
+}
+.nox-question-circle:before {
+  content: "\e938";
+}
+.nox-question:before {
+  content: "\e939";
+}
+.nox-qun:before {
+  content: "\e93a";
+}
+.nox-race:before {
+  content: "\e93b";
+}
+.nox-radar:before {
+  content: "\e93c";
+}
+.nox-recharge:before {
+  content: "\e93d";
+}
+.nox-remove-circle-o:before {
+  content: "\e93e";
+}
+.nox-remove-circle:before {
+  content: "\e93f";
+}
+.nox-remove:before {
+  content: "\e940";
+}
+.nox-rmb:before {
+  content: "\e941";
+}
+.nox-run:before {
+  content: "\e942";
+}
+.nox-search:before {
+  content: "\e943";
+}
+.nox-share:before {
+  content: "\e944";
+}
+.nox-sort-down:before {
+  content: "\e945";
+}
+.nox-sort-left:before {
+  content: "\e946";
+}
+.nox-sort-right:before {
+  content: "\e947";
+}
+.nox-sort-up:before {
+  content: "\e948";
+}
+.nox-star-empty:before {
+  content: "\e949";
+}
+.nox-star-full-half:before {
+  content: "\e94a";
+}
+.nox-star-full:before {
+  content: "\e94b";
+}
+.nox-tool:before {
+  content: "\e94c";
+}
+.nox-trand:before {
+  content: "\e94d";
+}
+.nox-trash:before {
+  content: "\e94e";
+}
+.nox-update:before {
+  content: "\e94f";
+}
+.nox-upload:before {
+  content: "\e950";
+}
+.nox-user:before {
+  content: "\e951";
+}
+.nox-usercheck:before {
+  content: "\e952";
+}
+.nox-weibo:before {
+  content: "\e953";
+}
+.nox-weixin:before {
+  content: "\e954";
+}
+.nox-wifi:before {
+  content: "\e955";
+}
+

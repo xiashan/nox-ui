@@ -1,0 +1,68 @@
+//
+// Sidebar
+// --------------------------------------------------
+
+.sidebar {
+  width: 224px;
+  z-index: 1;
+  position: absolute;
+  margin-top: 1px;
+  border-right: 1px solid $gray-bd;
+
+  ul {
+    list-style: none;
+
+    li {
+      font-size: $font-size-small;
+      color: $text-color;
+
+      a {
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        font-size: $font-size-base;
+        color: $text-color;
+        background: $body-bg;
+        text-decoration: none;
+        padding-top: 0;
+
+        &:hover,
+        &:active {
+          color: $link-color;
+          background: $gray-bg;
+        }
+
+        span {
+          padding-left: 8px;
+        }
+        .menuicon {
+          margin-left: 32px;
+          position: relative;
+          top: 1px;
+          display: inline-block;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+      }
+    }
+  }
+  .nav-second-level {
+    display: none;
+    padding: 0 16px;
+    background: $body-bg;
+    li a {
+      display: block;
+      padding-left: 40px;
+      padding-top: 0;
+      color: $text-color-lighter;
+    }
+  }
+  .active .nav-second-level {
+    height:auto;
+    display: block;
+  }
+}
+

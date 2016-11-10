@@ -1,0 +1,116 @@
+//
+// Header
+// --------------------------------------------------
+
+.site-header {
+  height: 80px;
+  line-height: 80px;
+  background-color: $body-bg;
+  display: -webkit-box;
+  border-bottom: 1px solid $gray-bd;
+
+  .logo {
+    width: 224px;
+    border-right: 1px solid $gray-bd;
+    height: 80px;
+    padding-left: 24px;
+    display: table-cell;
+  }
+
+  .header-right {
+    padding-left: 32px;
+    -webkit-box-flex: 9;
+    margin-right: 32px;
+  }
+
+  .user-info {
+    position: relative;
+    float: right;
+    line-height: 20px;
+    margin-top: 24px;
+    text-align: right;
+    > a {
+      cursor: pointer;
+      line-height: 32px;
+      color: $text-color;
+      display: block;
+      i {
+        color: #aaadb4;
+      }
+      .avatar {
+        height: 32px;
+        width: 32px;
+        border-radius: 16px;
+        margin-right: 8px;
+        border: 1px solid $gray-bd;
+      }
+    }
+    > ul {
+      display: none;
+      list-style: none;
+      border: 1px solid $gray-bd;
+      background-color: $body-bg;
+      padding: 8px 0;
+      width: 94px;
+      position: absolute;
+      right: 0;
+      text-align: left;
+      li {
+        a {
+          display: block;
+          line-height: 32px;
+          padding: 0 16px;
+          color: $text-color;
+          &:hover {
+            background-color: $gray-bg;
+            color: $link-color;
+          }
+        }
+      }
+    }
+    &.active {
+      > ul {
+        display: block;
+      }
+    }
+  }
+}
+
+.content-wrapper {
+  position: inherit;
+  min-height: 531px;
+  margin-left: 224px;
+  padding: 0 32px;
+}
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  margin-right: 15px;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  &:focus {
+    outline: 0
+  }
+  .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    + .icon-bar {
+      margin-top: 4px
+    }
+  }
+}
+@media (min-width: $screen-sm) {
+  .navbar-toggle {
+    display:none
+  }
+}
+
+

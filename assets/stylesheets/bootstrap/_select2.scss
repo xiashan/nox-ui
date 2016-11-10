@@ -1,0 +1,116 @@
+.select2{
+  width:100%;
+  font-size: $font-size-large;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  position: relative;
+  vertical-align: middle;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #444;
+  line-height: 30px;
+}
+.select2 input{
+  //width: 142px;
+  z-index: 999;
+  display: block;
+  background: #ffffff;
+  border: 1px solid #f1f2f4;
+  outline: none;
+  height: 32px;
+  margin-top:0;
+  text-align: left;
+  width:100%;
+}
+.select2 .list-wrap{
+  position: absolute;
+  display: block;
+  width:100%;
+}
+.select2 .nox-sort-down,.select2 .nox-sort-up{
+  float: right;
+  margin-top: -24px;
+  margin-right: 8px;
+}
+
+.select2 .select2-results_options {
+  cursor:pointer;
+  display:block;
+  color:$text-color;
+  user-select: none;
+  -webkit-user-select: none;
+  padding: 6px;
+  height: 32px;
+  line-height: 20px;
+}
+.select2 .select2-results_options .select2-results__option:hover{
+  background-color:#247ddc ;
+  color:#ffffff;
+}
+.select2-container--default .select2-selection--single {
+  background-color: #fff;
+   border:none;
+  border-radius: 4px;
+}
+.select2-search__field{
+  border:1px solid #f1f2f4;
+}
+.select2-dropdown {
+  background-color: white;
+  border: 1px solid #f1f2f4;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  left: -100000px;
+  width: 100%;
+  z-index: 1051;
+}
+.select2 .select2-selection__rendered,.select2-selection .select2-selection--single{
+  border: 1px solid #f1f2f4;
+  border-radius: 2px;
+  height: 32px;
+  padding-left: 8px;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.select2 .select2-results{
+  border: 1px solid #f1f2f4;
+  // width:140px;
+  position: relative;
+  z-index: 999;
+  background: #ffffff;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 133px;
+  max-height: 200px;
+}
+
+.selected{
+  // margin-left: 10px;
+  z-index: 999;
+  display: block;
+  background: #ffffff;
+  border: 1px solid #aaa;
+  outline: none;
+  height: 22px;
+  padding: 0 2px;
+  text-align: left;
+  border-radius: 2px;
+}
+.select2 .input-container{
+
+  height:36px;
+  background: #fff;
+  /* border: 1px solid #f1f2f4; */
+  padding: 2px;
+  display: block;
+  position: relative;
+  z-index: 999;
+  border:1px  solid #f1f2f4;
+  border-top:0;
+  border-bottom:0;
+  width:100%;
+}

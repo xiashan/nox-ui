@@ -1,0 +1,13 @@
+// Margin & Padding
+
+@mixin margin-step($parent, $type, $step) {
+  #{$parent} {
+    margin-#{$type}: $step*8px;
+  }
+}
+
+@mixin padding-step($parent, $type, $step) {
+  #{$parent} {
+    padding-#{$type}: $step*8px;
+  }
+}

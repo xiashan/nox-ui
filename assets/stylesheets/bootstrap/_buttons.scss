@@ -17,21 +17,13 @@
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
   white-space: nowrap;
-  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+  @include button-size(9px, 20px, $font-size-base, $line-height-base, $btn-border-radius-small);
   @include user-select(none);
-
-  &,
-  &:active,
-  &.active {
-    &:focus,
-    &.focus {
-      @include tab-focus;
-    }
-  }
 
   &:hover,
   &:focus,
   &.focus {
+    outline: 0;
     color: $btn-default-color;
     text-decoration: none;
   }
@@ -40,7 +32,6 @@
   &.active {
     outline: 0;
     background-image: none;
-    @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
   }
 
   &.disabled,
@@ -48,10 +39,18 @@
   fieldset[disabled] & {
     cursor: $cursor-disabled;
     @include opacity(.65);
-    @include box-shadow(none);
   }
 
   // [converter] extracted a& to a.btn
+  // 带图标
+  i {
+    font-size: 24px;
+    position: absolute;
+    top: 7px;
+    & + span {
+      margin-left: 32px;
+    }
+  }
 }
 
 a.btn {
@@ -66,7 +65,7 @@ a.btn {
 // --------------------------------------------------
 
 .btn-default {
-  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+  @include button-variant-default($btn-default-color, $btn-default-bg, $btn-default-border);
 }
 .btn-primary {
   @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
@@ -122,32 +121,39 @@ a.btn {
   fieldset[disabled] & {
     &:hover,
     &:focus {
-      color: $btn-link-disabled-color;
+      color: $btn-default-bg;
       text-decoration: none;
     }
   }
 }
 
+.btn-icon {
+  position: relative;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
 
 // Button Sizes
 // --------------------------------------------------
-
 .btn-lg {
-  // line-height: ensure even-numbered height of button next to large input
-  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-large);
+  // line-height: ensure proper height of button next to small input
+  @include button-size(13px, 40px, $font-size-base, $line-height-base, $btn-border-radius-small);
+  i {
+    font-size: 24px;
+    top: 10px;
+  }
 }
 .btn-sm {
   // line-height: ensure proper height of button next to small input
-  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+  @include button-size(5px, 20px, $font-size-base, $line-height-base, $btn-border-radius-small);
+  i {
+    font-size: 20px;
+    top: 4px;
+  }
 }
-.btn-xs {
-  @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
-}
-
 
 // Block button
 // --------------------------------------------------
-
 .btn-block {
   display: block;
   width: 100%;

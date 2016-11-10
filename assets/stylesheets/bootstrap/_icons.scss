@@ -7,7 +7,7 @@
     src: url('#{$icon-font-path}#{$icon-font-name}.eot?ga1slg#iefix') format('embedded-opentype'),
          url('#{$icon-font-path}#{$icon-font-name}.ttf?ga1slg') format('truetype'),
          url('#{$icon-font-path}#{$icon-font-name}.woff?ga1slg') format('woff'),
-         url('#{$icon-font-path}#{$icon-font-name}.svg?ga1slg#{$icon-font-svg-id}')) format('svg');
+         url('#{$icon-font-path}#{$icon-font-name}.svg?ga1slg#{$icon-font-svg-id}') format('svg');
   }
 }
 

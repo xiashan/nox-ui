@@ -17,6 +17,9 @@
 .pull-left {
   float: left !important;
 }
+.ellipsis {
+  @include text-overflow;
+}
 
 
 // Toggling content
@@ -36,3 +39,45 @@
   @include text-hide;
 }
 
+// margin & padding
+@include margin-step('.mt-1x', 'top', 1);
+@include margin-step('.mt-2x', 'top', 2);
+@include margin-step('.mt-3x', 'top', 3);
+@include margin-step('.mt-4x', 'top', 4);
+@include margin-step('.mt-5x', 'top', 5);
+@include margin-step('.mb-1x', 'bottom', 1);
+@include margin-step('.mb-2x', 'bottom', 2);
+@include margin-step('.mb-3x', 'bottom', 3);
+@include margin-step('.mb-4x', 'bottom', 4);
+@include margin-step('.mb-5x', 'bottom', 5);
+@include margin-step('.ml-1x', 'left', 1);
+@include margin-step('.ml-2x', 'left', 2);
+@include margin-step('.ml-3x', 'left', 3);
+@include margin-step('.ml-4x', 'left', 4);
+@include margin-step('.ml-5x', 'left', 5);
+@include margin-step('.mr-1x', 'right', 1);
+@include margin-step('.mr-2x', 'right', 2);
+@include margin-step('.mr-3x', 'right', 3);
+@include margin-step('.mr-4x', 'right', 4);
+@include margin-step('.mr-5x', 'right', 5);
+
+@include padding-step('.pt-1x', 'top', 1);
+@include padding-step('.pt-2x', 'top', 2);
+@include padding-step('.pt-3x', 'top', 3);
+@include padding-step('.pt-4x', 'top', 4);
+@include padding-step('.pt-5x', 'top', 5);
+@include padding-step('.pb-1x', 'bottom', 1);
+@include padding-step('.pb-2x', 'bottom', 2);
+@include padding-step('.pb-3x', 'bottom', 3);
+@include padding-step('.pb-4x', 'bottom', 4);
+@include padding-step('.pb-5x', 'bottom', 5);
+@include padding-step('.pl-1x', 'left', 1);
+@include padding-step('.pl-2x', 'left', 2);
+@include padding-step('.pl-3x', 'left', 3);
+@include padding-step('.pl-4x', 'left', 4);
+@include padding-step('.pl-5x', 'left', 5);
+@include padding-step('.pr-1x', 'right', 1);
+@include padding-step('.pr-2x', 'right', 2);
+@include padding-step('.pr-3x', 'right', 3);
+@include padding-step('.pr-4x', 'right', 4);
+@include padding-step('.pr-5x', 'right', 5);

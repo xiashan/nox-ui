@@ -19,6 +19,7 @@ $nav-link-padding: 16px;
 .nav-tabs {
   font-size: 14px;
   border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+  margin-bottom: 16px;
   &::after {
     content: "";
     display: table;
@@ -56,7 +57,7 @@ $nav-link-padding: 16px;
       border-bottom-color: $nav-tabs-border-color;
       left: 50%;
       margin-left: -8px;
-      top: 38px;
+      top: 44px;
       display: none;
     }
     .arrow:after {

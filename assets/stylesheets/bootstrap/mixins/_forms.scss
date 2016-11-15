@@ -33,11 +33,6 @@
     border-radius: $border-radius;
   }
 
-  select#{$parent} {
-    height: $input-height;
-    line-height: $input-height;
-  }
-
   textarea#{$parent},
   select[multiple]#{$parent} {
     height: auto;

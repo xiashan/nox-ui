@@ -57,6 +57,11 @@ select[size] {
   height: auto;
 }
 
+// 去掉select chrom默认5px的border,但这样就不显示箭头了，所以TODO特别处理一下
+select {
+  -webkit-appearance: none;
+}
+
 // Focus for file, radio, and checkbox
 input[type="file"]:focus,
 input[type="radio"]:focus,
@@ -301,10 +306,6 @@ input[type="checkbox"] {
     font-size: $font-size-base;
     line-height: $line-height-small;
     border-radius: $input-border-radius-small;
-  }
-  select.form-control {
-    height: $input-height-small;
-    line-height: $input-height-small;
   }
   textarea.form-control,
   select[multiple].form-control {

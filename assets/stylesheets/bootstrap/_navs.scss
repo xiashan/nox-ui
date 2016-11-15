@@ -75,6 +75,7 @@ $nav-link-padding: 16px;
     display: block;
     color: $text-color-lighter;
     padding: $nav-link-padding;
+    cursor: pointer;
     &:hover {
       text-decoration: none;
       color: $brand-primary;

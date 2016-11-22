@@ -10,3 +10,9 @@
     color: darken($color, 10%);
   }
 }
+
+@mixin text-emphasis-size($parent, $size) {
+  #{$parent} {
+    font-size: $size;
+  }
+}

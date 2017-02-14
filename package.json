@@ -1,0 +1,16 @@
+{
+  "name": "nox-ui",
+  "version": "0.0.0",
+  "dependencies": {},
+  "scripts": {
+    "start": "gulp"
+  },
+  "devDependencies": {
+    "browser-sync": "~2.18.7",
+    "gulp": "~3.9.1",
+    "gulp-sass": "~3.1.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}

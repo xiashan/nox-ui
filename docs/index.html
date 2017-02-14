@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel='stylesheet' href='css/main.css'>
+</head>
+<body style="padding: 24px;">
+<h2>button</h2>
+<div>
+  <button class="btn btn-default">Default</button>
+  <button class="btn btn-primary">Primary</button>
+  <button class="btn btn-success disabled">Success</button>
+  <button class="btn btn-info">Info</button>
+  <button class="btn btn-danger">Danger</button>
+  <button class="btn btn-warning">Warning</button>
+</div>
+<div class="mt-1x">
+  <button class="btn btn-primary btn-lg">Primary LG</button>
+  <button class="btn btn-primary btn-sm">Primary SM</button>
+  <a class="btn btn-primary disabled">This is A</a>
+  <button type="button" class="btn btn-default btn-icon btn-sm"><i class="nox-save"></i><span>Save</span></button>
+  <button type="button" class="btn btn-default btn-icon btn-sm"><span>Saved(1)</span><i class="nox-sort-down"></i></button>
+  <button type="button" class="btn btn-default btn-icon btn-lg"><i class="nox-save"></i><span>Save</span></button>
+  <button type="button" class="btn btn-default btn-icon btn-lg"><span>Saved(1)</span><i class="nox-sort-down"></i></button>
+  <button type="button" class="btn btn-default btn-icon"><i class="nox-save"></i><span>Save</span></button>
+  <button type="button" class="btn btn-default btn-icon"><span>Saved(1)</span><i class="nox-sort-down"></i></button>
+</div>
+<h2>Form</h2>
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <!--<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">-->
+    <p class="form-control-static">This is Static</p>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputDate1">Date</label>
+    <input type="date" class="form-control" id="exampleInputDate1" placeholder="Date">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">Example block-level help text here.</p>
+  </div>
+  <div class="checkbox">
+    <label> <input type="checkbox"> Check me out </label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+<h3>Horizontal Form</h3>
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Static</label>
+    <div class="col-sm-10">
+      <p class="form-control-static">This is Static</p>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label> <input type="checkbox"> Remember me </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group"> <div class="col-sm-offset-2 col-sm-10">
+    <button type="submit" class="btn btn-default">Sign in</button>
+  </div>
+  </div>
+</form>
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="col-md-3">Lable:</label>
+    <div class="col-md-9">
+      <input class="form-control">
+    </div>
+  </div>
+</form>
+
+<h2>Datepicker</h2>
+<div style="position:relative; height: 338px;">
+
+<div class="dropdown-menu datepicker bottom-left" style="max-width: 320px; top: 32px; left: 0px; display: block; visibility: visible;">
+  <table style="table-layout: fixed; height: 100%; width: 100%">
+    <thead>
+    <tr class="text-center"><th><button tabindex="-1" type="button" class="btn  btn-sm btn-default pull-left" ><i class="nox-sort-left"></i></button></th><th colspan="5"><button tabindex="-1" type="button" class="btn btn-sm btn-default btn-block text-strong"><strong style="text-transform: capitalize" >February 2017</strong></button></th><th><button tabindex="-1" type="button" class="btn btn-sm btn-default pull-right" ><i class="nox-sort-right"></i></button></th></tr><!-- ngIf: showLabels --><tr><th class="dow text-center">Mon</th><th class="dow text-center">Tue</th><th class="dow text-center">Wed</th><th class="dow text-center">Thu</th><th class="dow text-center">Fri</th><th class="dow text-center">Sat</th><th class="dow text-center">Sun</th></tr><!-- end ngIf: showLabels --></thead><tbody><!-- ngRepeat: (i, row) in rows --><tr height="16.666666666666668%"><!-- ngRepeat: (j, el) in row --><td class="text-center" ><button tabindex="-1" type="button" class="btn btn-sm btn-default"  disabled="disabled"><span  class="text-muted">30</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled" disabled="disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding text-muted">31</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled" disabled="disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">01</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled" disabled="disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">02</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled" disabled="disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">03</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled" disabled="disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">04</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled" disabled="disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">05</span></button></td><!-- end ngRepeat: (j, el) in row --></tr><!-- end ngRepeat: (i, row) in rows --><tr ng-repeat="(i, row) in rows" height="16.666666666666668%" class="ng-scope"><!-- ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled" disabled="disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">06</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled" disabled="disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">07</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled" disabled="disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">08</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled" disabled="disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">09</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled" disabled="disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">10</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled" disabled="disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">11</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled" disabled="disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">12</span></button></td><!-- end ngRepeat: (j, el) in row --></tr><!-- end ngRepeat: (i, row) in rows --><tr ng-repeat="(i, row) in rows" height="16.666666666666668%" class="ng-scope"><!-- ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled" disabled="disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">13</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default btn-info btn-today" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled" disabled="disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">14</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">15</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">16</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">17</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">18</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">19</span></button></td><!-- end ngRepeat: (j, el) in row --></tr><!-- end ngRepeat: (i, row) in rows --><tr ng-repeat="(i, row) in rows" height="16.666666666666668%" class="ng-scope"><!-- ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">20</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">21</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">22</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">23</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">24</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">25</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">26</span></button></td><!-- end ngRepeat: (j, el) in row --></tr><!-- end ngRepeat: (i, row) in rows --><tr ng-repeat="(i, row) in rows" height="16.666666666666668%" class="ng-scope"><!-- ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">27</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding">28</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding text-muted">01</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding text-muted">02</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding text-muted">03</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding text-muted">04</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding text-muted">05</span></button></td><!-- end ngRepeat: (j, el) in row --></tr><!-- end ngRepeat: (i, row) in rows --><tr ng-repeat="(i, row) in rows" height="16.666666666666668%" class="ng-scope"><!-- ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding text-muted">06</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding text-muted">07</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding text-muted">08</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding text-muted">09</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding text-muted">10</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding text-muted">11</span></button></td><!-- end ngRepeat: (j, el) in row --><td class="text-center ng-scope" ng-repeat="(j, el) in row"><button tabindex="-1" type="button" class="btn btn-sm btn-default" ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}" ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}" ng-bind="el.label" class="ng-binding text-muted">12</span></button></td><!-- end ngRepeat: (j, el) in row --></tr><!-- end ngRepeat: (i, row) in rows --></tbody><tfoot><tr><td colspan="7"><div class="btn-group btn-group-justified" role="group"><!-- ngIf: $hasToday --><!-- ngIf: $hasClear --></div></td></tr></tfoot></table></div>
+</div>
+<h2>Table</h2>
+<h3>Normal Table</h3>
+<table class="table">
+  <thead> <tr> <th>Col1</th> <th>Col2</th> </tr> </thead>
+  <tbody> <tr> <td>Value1</td> <td>Value2</td> </tr> <tr> <td>Value3</td> <td>Value4</td> </tr> </tbody>
+</table>
+<h3>table-condensed</h3>
+<table class="table table-condensed">
+  <thead> <tr> <th>Col1</th> <th>Col2</th> </tr> </thead>
+  <tbody> <tr> <td>Value1</td> <td>Value2</td> </tr> <tr> <td>Value3</td> <td>Value4</td> </tr> </tbody>
+</table>
+<h3>table-bordered</h3>
+<table class="table table-bordered">
+  <thead> <tr> <th>Col1</th> <th>Col2</th> </tr> </thead>
+  <tbody> <tr> <td>Value1</td> <td>Value2</td> </tr> <tr> <td>Value3</td> <td>Value4</td> </tr> </tbody>
+</table>
+<h3>table-striped</h3>
+<table class="table table-striped">
+  <thead> <tr> <th>Col1</th> <th>Col2</th> </tr> </thead>
+  <tbody> <tr> <td>Value1</td> <td>Value2</td> </tr> <tr> <td>Value3</td> <td>Value4</td> </tr> <tr> <td>Value3</td> <td>Value4</td> </tr> </tbody>
+</table>
+<h3>table-hover</h3>
+<table class="table table-hover">
+  <thead> <tr> <th>Col1</th> <th>Col2</th> </tr> </thead>
+  <tbody> <tr> <td>Value1</td> <td>Value2</td> </tr> <tr> <td>Value3</td> <td>Value4</td> </tr> </tbody>
+</table>
+<h2>Dropdown</h2>
+<div style="position: relative; height: 100px;" class="open">
+  <ul class="dropdown-menu" style="top: 0">
+    <li>
+      <a href="#">UserCenter</a>
+    </li>
+    <li>
+      <a href="#">Logout</a>
+    </li>
+  </ul>
+</div>
+<h2>Navs</h2>
+<div>
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item active" role="presentation" >
+      <a class="nav-link " role="tab" data-toggle="tab" >Effective Offer List</a>
+      <div class="arrow"></div>
+    </li>
+    <li class="nav-item" role="presentation" >
+      <a class="nav-link " role="tab" data-toggle="tab" >Invalid Offer List</a>
+      <div class="arrow"></div>
+    </li>
+    <li class="nav-item" role="presentation" >
+      <a class="nav-link " role="tab" data-toggle="tab" >Eliminated Offer List</a>
+      <div class="arrow"></div>
+    </li>
+    <li class="nav-item" role="presentation" >
+      <a class="nav-link " role="tab" data-toggle="tab" >Pending Offer List</a>
+      <div class="arrow"></div>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active">
+      abc
+    </div>
+    <div class="tab-pane">
+      def
+    </div>
+  </div>
+</div>
+<h2>Upload</h2>
+<div>
+<ul class="upload-image-list">
+  <li class="upload-image">
+    <div class="upload-image-show">
+      <i class="image-remove nox-remove"></i>
+      <a href="#"><img src="image/111.png"> </a>
+    </div>
+  </li>
+  <li class="upload-image">
+    <div class="upload-image-process">
+      <i class="image-remove nox-remove"></i>
+      <div class="progress">
+        <div class="progress-bar progress-bar-success" style="width: 50%"></div>
+      </div>
+    </div>
+  </li>
+  <li class="upload-image">
+    <div class="upload-image-process">
+      <i class="image-remove nox-remove"></i>
+      <div class="upload-error">
+        <span>Upload<br>Failed</span>
+        <i>&nbsp;</i>
+      </div>
+    </div>
+  </li>
+  <li class="upload-image">
+    <div class="upload-image-add">
+      <span>+</span>
+      <input value="+" class="upload-file-btn" type="file">
+    </div>
+  </li>
+</ul>
+  <ul class="upload-image-list">
+    <li class="upload-image upload-image-xl">
+      <div class="upload-image-show">
+        <i class="image-remove nox-remove"></i>
+        <a href="#"><img src="image/111.png"> </a>
+      </div>
+    </li>
+    <li class="upload-image upload-image-xl">
+      <div class="upload-image-process">
+        <i class="image-remove nox-remove"></i>
+        <div class="progress">
+          <div class="progress-bar progress-bar-success" style="width: 50%"></div>
+        </div>
+      </div>
+    </li>
+    <li class="upload-image upload-image-xl">
+      <div class="upload-image-process">
+        <i class="image-remove nox-remove"></i>
+        <div class="upload-error">
+          <span>Upload<br>Failed</span>
+          <i>&nbsp;</i>
+        </div>
+      </div>
+    </li>
+    <li class="upload-image upload-image-xl">
+      <div class="upload-image-add">
+        <span>+</span>
+        <input value="+" class="upload-file-btn" type="file">
+      </div>
+    </li>
+  </ul>
+</div>
+<h2>ProcessBar</h2>
+<div>
+  <div class="progress">
+    <div class="progress-bar progress-bar-success" style="width: 50%"></div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar progress-bar-danger" style="width: 50%"></div>
+  </div>
+
+</div>
+<h2>Input Group</h2>
+<form class="form-horizontal">
+  <div class="form-group form-group-sm">
+    <label class="control-label col-md-3" for="exampleInputAmount">Amount (in dollars)</label>
+    <div class="col-md-5 ">
+      <div class="input-group input-group-sm">
+        <div class="input-group-addon">$</div>
+        <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+        <div class="input-group-btn">
+          <button class="btn btn-primary">Button</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Transfer cash</button>
+</form>
+<h2>Modal</h2>
+<div>
+  <div class="modal" style="z-index: 1050; display: none">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">Invalid Offer</h3>
+      </div>
+      <div class="modal-body">
+        aa
+      </div>
+      <div class="modal-footer">
+        <div class="narrow row">
+          <div class="col-xs-6">
+            <button type="button" class="btn btn-block ng-binding btn-primary" >Yes</button>
+          </div>
+          <div class="col-xs-6">
+            <button type="button" class="btn btn-block ng-binding btn-default" >Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h2>Tooltip</h2>
+<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on Bottom</button>
+<div class="tooltip bottom" role="tooltip" style="opacity: 1">
+  <div class="tooltip-arrow"></div>
+  <div class="tooltip-inner"> Tooltip on the bottom </div>
+</div>
+<h2>Popover</h2>
+<div style="height: 100px; position: relative">
+  <div class="popover bottom" style="display: block">
+    <div class="arrow"></div>
+    <h3 class="popover-title">Popover bottom</h3>
+    <div class="popover-content">
+      <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+    </div>
+  </div>
+</div>
+<h2>Pagination</h2>
+<div class="pagination">
+  <ul>
+    <li class="disabled">
+      <span class="nox-sort-left"></span>
+    </li>
+    <li class="active">
+      <span>1</span>
+    </li>
+    <li class="active">
+      <span>1</span>
+    </li>
+    <li>
+      <span>2</span>
+    </li>
+    <li>
+      <span class="nox-sort-right"></span>
+    </li>
+  </ul>
+  <span>Total: 48</span>
+</div>
+</body>
+</html>

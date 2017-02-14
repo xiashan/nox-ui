@@ -1,0 +1,149 @@
+/*****************上传图片相关样式*******************/
+// 图片列表,如果只有一个可以不用列表
+ul.upload-image-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: calc(100% + 8px);
+  overflow: hidden;
+  margin-bottom: -8px;
+  & li {
+    float: left;
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+}
+// 标准尺寸的图片80*80
+.upload-image {
+  width: 80px;
+  height: 80px;
+  // 删除按钮定位
+  .image-remove {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    background-color: $brand-danger;
+    color: #fff;
+    width: 14px;
+    height: 14px;
+    font-size: 12px;
+    padding-top: 1px;
+    padding-left: 1px;
+  }
+  & .upload-image-show {
+    line-height: 80px;
+  }
+}
+.upload-image-show,
+.upload-image-process,
+.upload-image-add {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+// 增加图片进度条显示图片等
+.upload-image-show {
+  text-align: center;
+  & img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+    margin-top: -2px;
+  }
+}
+@mixin get-image-wrapper {
+  border: 1px dashed $gray-bd-darker;
+  padding: 7px;
+}
+// 进度条&错误提示
+.upload-image-process {
+  @include  get-image-wrapper();
+  & .progress {
+    // 改变大小时需要重新定义
+    margin-top: 27px;
+  }
+  & .upload-error {
+    text-align: center;
+    word-break: break-all;
+    height: 100%;
+    // 改变大小时需要重新定义
+    line-height: 64px;
+    & span {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 20px;
+      color: $brand-danger;
+      font-size: $font-size-small;
+    }
+    & i {
+      width: 0;
+      vertical-align: middle;
+      font-size: 0;
+    }
+  }
+}
+// 增加图片
+.upload-image-add {
+  @include  get-image-wrapper();
+  & span {
+    display: block;
+    text-align: center;
+    // 改变大小时需要重新定义
+    margin-top: 20px;
+  }
+  & .upload-image-btn {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    //  filter: alpha(opacity: 0);
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+  }
+}
+// 图片提示信息
+.upload-file-desc {
+  display: block;
+  padding-top: 4px;
+  text-align: center;
+  // 改变大小时需要重新定义
+  width: 80px;
+}
+
+/****大尺寸图片****/
+.upload-image-xl {
+  width: 120px;
+  height: 120px;
+  & .upload-image-show {
+    line-height: 120px;
+    .icon-remove {
+//      top: -48px;
+    }
+  }
+  .progress {
+    margin-top: 48px;
+  }
+  .upload-error {
+    line-height: 102px;
+  }
+  & .upload-image-add > span {
+    margin-top: 40px;
+  }
+  + .upload-file-desc {
+    width: 120px;
+  }
+}
+
+.upload-file-btn {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  opacity: 0;
+  //  filter: alpha(opacity: 0);
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+}

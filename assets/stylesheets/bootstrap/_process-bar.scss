@@ -1,0 +1,39 @@
+// Outer container
+.progress {
+  overflow: hidden;
+  height: $progress-height;
+  //  margin-bottom: @line-height-computed;
+  background-color: $progress-bg;
+  border-radius: $progress-border-radius;
+}
+
+// Bar of progress
+.progress-bar {
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: $font-size-small;
+  line-height: $progress-height;
+  color: $progress-bar-color;
+  text-align: center;
+  background-color: $progress-bar-bg;
+}
+
+@mixin  progress-bar-variant($color) {
+  background-color: $color;
+}
+
+// Variations
+// -------------------------
+
+.progress-bar-success {
+  @include  progress-bar-variant($progress-bar-success-bg);
+}
+
+.progress-bar-warning {
+  @include  progress-bar-variant($progress-bar-warning-bg);
+}
+
+.progress-bar-danger {
+  @include  progress-bar-variant($progress-bar-danger-bg);
+}

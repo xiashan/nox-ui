@@ -1,12 +1,3 @@
-//
-// Navs
-// --------------------------------------------------
-
-$nav-tabs-border-width: 1px;
-$nav-tabs-border-color: $gray-bd;
-$nav-item-margin: 8px;
-$nav-link-padding: 16px;
-
 .nav {
   padding-left: 0;
   margin-bottom: 0;
@@ -20,11 +11,7 @@ $nav-link-padding: 16px;
   font-size: 14px;
   border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
   margin-bottom: 16px;
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+  @include clearfix;
 
   .nav-item {
     position: relative;
@@ -38,6 +25,12 @@ $nav-link-padding: 16px;
 
     &.active {
       background-color: transparent;
+    }
+    &.disabled {
+      .nav-link {
+        color: #ccc;
+        cursor: default;
+      }
     }
 
     .arrow {

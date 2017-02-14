@@ -95,14 +95,15 @@ input[type="checkbox"]:focus {
   display: block;
   width: 100%;
   height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
-  padding: $padding-base-vertical $padding-base-horizontal;
+  padding: $padding-base-vertical $padding-input-horizontal-base;
   font-size: $font-size-base;
   line-height: $line-height-base;
   color: $input-color;
   background-color: $input-bg;
   background-image: none; // Reset unusual Firefox-on-Android default style;
   border: 1px solid $input-border;
-  border-radius: $input-border-radius-small; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+  border-radius: $input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+  @include transition(border-color ease-in-out .15s);
 
   // Customize the `:focus` state to imitate native WebKit styles.
   @include form-control-focus;
@@ -174,6 +175,11 @@ input[type="search"] {
     .input-group-sm & {
       line-height: $input-height-small;
     }
+
+    &.input-lg,
+    .input-group-lg & {
+      line-height: $input-height-large;
+    }
   }
 }
 
@@ -235,7 +241,7 @@ input[type="search"] {
 .radio-inline + .radio-inline,
 .checkbox-inline + .checkbox-inline {
   margin-top: 0;
-  margin-left: 10px; // space out consecutive inline controls
+  margin-left: 24px; // space out consecutive inline controls
 }
 
 // Apply same disabled cursor tweak as for inputs
@@ -277,16 +283,10 @@ input[type="checkbox"] {
 
 .form-control-static {
   // Size it appropriately next to real form controls
-  padding-top: ($padding-base-vertical + 1);
-  padding-bottom: ($padding-base-vertical + 1);
+  padding: ($padding-base-vertical + 1) 0;
   // Remove default margin from `p`
   margin-bottom: 0;
-  min-height: ($line-height-computed + $font-size-base);
-
-  &.input-sm {
-    padding-left: 0;
-    padding-right: 0;
-  }
+  min-height: $input-height-base;
 }
 
 
@@ -298,23 +298,26 @@ input[type="checkbox"] {
 // The `.form-group-* form-control` variations are sadly duplicated to avoid the
 // issue documented in https://github.com/twbs/bootstrap/issues/15074.
 
-@include input-size('.input-sm', $input-height-small, $padding-small-vertical, $padding-small-horizontal, $font-size-base, $line-height-small, $input-border-radius-small);
+@include input-size('.input-sm', $input-height-small, $padding-small-vertical, $padding-input-horizontal-base, $font-size-base, $line-height-small, $input-border-radius);
 .form-group-sm {
   .form-control {
     height: $input-height-small;
-    padding: $padding-small-vertical $padding-small-horizontal;
+    padding: $padding-small-vertical $padding-input-horizontal-base;
     font-size: $font-size-base;
     line-height: $line-height-small;
-    border-radius: $input-border-radius-small;
+    border-radius: $input-border-radius;
+  }
+  select.form-control {
+    height: $input-height-small;
+    line-height: $input-height-small;
   }
   textarea.form-control,
   select[multiple].form-control {
     height: auto;
   }
   .form-control-static {
-    height: $input-height-small;
-    min-height: ($line-height-computed + $font-size-base);
-    padding: ($padding-small-vertical + 1) $padding-small-horizontal;
+    min-height: $input-height-small;
+    padding: $padding-small-vertical 0;
     font-size: $font-size-base;
     line-height: $line-height-small;
   }
@@ -385,7 +388,7 @@ input[type="checkbox"] {
   .form-group-sm {
     @media (min-width: $screen-sm-min) {
       .control-label {
-        padding-top: ($padding-small-vertical + 1);
+        padding-top: $padding-small-vertical;
         font-size: $font-size-base;
       }
     }

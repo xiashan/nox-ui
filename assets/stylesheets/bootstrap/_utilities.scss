@@ -20,6 +20,9 @@
 .ellipsis {
   @include text-overflow;
 }
+.relative {
+  position: relative;
+}
 
 
 // Toggling content

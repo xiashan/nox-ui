@@ -1,3 +1,4 @@
+// 这个是select 4的版本
 .select2-container {
   box-sizing: border-box;
   display: inline-block;
@@ -30,7 +31,6 @@
       position: relative;
       cursor: pointer;
       float: right;
-      font-weight: bold;
     }
     .select2-selection__arrow {
       position: absolute;
@@ -50,10 +50,63 @@
         width: 0; }
     }
   }
+  .select2-selection--multiple {
+    display: block;
+    min-height: 32px;
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: white;
+    border: 1px solid $gray-bd-darker;
+    border-radius: 2px;
+    cursor: text;
+    .select2-selection__rendered {
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      list-style: none;
+      margin: 0;
+      padding: 0 5px;
+      width: 100%;
+      li {
+        list-style: none;
+      }
+    }
+    .select2-selection__placeholder {
+      color: #999;
+      margin-top: 5px;
+      float: left;
+    }
+    .select2-selection__clear {
+      cursor: pointer;
+      float: right;
+      margin-top: 5px;
+      margin-right: 10px;
+    }
+    .select2-selection__choice {
+      background-color: $gray-bd-darker;
+      border: 1px solid $gray-bd-darker;
+      border-radius: 2px;
+      cursor: default;
+      float: left;
+      margin-right: 5px;
+      margin-top: 5px;
+      padding: 0 5px;
+    }
+    .select2-search--inline {
+      margin-top: 5px;
+      float: left;
+    }
+    .select2-selection__choice__remove {
+      color: #999;
+      cursor: pointer;
+      margin-right: 2px;
+    }
+  }
 
 
   &.select2-container--open {
-    .select2-selection--single {
+    .select2-selection--single, .select2-selection--multiple {
       border-color: #999;
     }
     .select2-selection--single .select2-selection__arrow b {
@@ -62,13 +115,13 @@
     }
 
     &.select2-container--above {
-      .select2-selection--single {
+      .select2-selection--single, .select2-selection--multiple {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
       }
     }
     &.select2-container--below {
-      .select2-selection--single {
+      .select2-selection--single, .select2-selection--multiple {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
       }
@@ -76,7 +129,7 @@
   }
 
   &.select2-container--focus {
-    .select2-selection--single {
+    .select2-selection--single, .select2-selection--multiple {
       outline: none;
     }
   }
@@ -259,3 +312,4 @@
     }
   }
 }
+

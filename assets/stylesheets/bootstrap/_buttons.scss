@@ -11,13 +11,13 @@
   margin-bottom: 0; // For input.btn
   font-weight: $btn-font-weight;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: middle; // 这个属性会造成下沉...
   touch-action: manipulation;
   cursor: pointer;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
   white-space: nowrap;
-  @include button-size(9px, 20px, $font-size-base, $line-height-base, $btn-border-radius-small);
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
   @include user-select(none);
 
   &:hover,
@@ -42,15 +42,6 @@
   }
 
   // [converter] extracted a& to a.btn
-  // 带图标
-  i {
-    font-size: 24px;
-    position: absolute;
-    top: 7px;
-    & + span {
-      margin-left: 32px;
-    }
-  }
 }
 
 a.btn {
@@ -129,26 +120,61 @@ a.btn {
 
 .btn-icon {
   position: relative;
-  padding-left: 20px !important;
-  padding-right: 20px !important;
+  // 带图标
+  i {
+    font-size: 24px;
+    position: absolute;
+    top: 7px;
+    & + span {
+      margin-left: 32px;
+      margin-right: 0;
+    }
+  }
+  span {
+    margin-left: 0;
+    margin-right: 32px;
+    & + i {
+      right: 20px;
+    }
+  }
 }
 
 // Button Sizes
 // --------------------------------------------------
 .btn-lg {
   // line-height: ensure proper height of button next to small input
-  @include button-size(13px, 40px, $font-size-base, $line-height-base, $btn-border-radius-small);
-  i {
-    font-size: 24px;
-    top: 10px;
+  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+  &.btn-icon {
+    i {
+      font-size: 24px;
+      top: 10px;
+    }
+    span {
+      & + i {
+        right: 40px;
+      }
+    }
   }
 }
 .btn-sm {
   // line-height: ensure proper height of button next to small input
-  @include button-size(5px, 20px, $font-size-base, $line-height-base, $btn-border-radius-small);
-  i {
-    font-size: 20px;
-    top: 4px;
+  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+  &.btn-icon {
+    i {
+      font-size: 16px;
+      top: 6px;
+      & + span {
+        margin-left: 24px;
+        margin-right: 0;
+      }
+    }
+    span {
+      margin-left: 0;
+      margin-right: 24px;
+      & + i {
+        right: 20px;
+      }
+    }
   }
 }
 

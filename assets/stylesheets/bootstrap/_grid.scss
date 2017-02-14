@@ -82,3 +82,12 @@
 @media (min-width: $screen-lg-min) {
   @include make-grid(lg);
 }
+
+// 较窄的网格间距，8px，一般用户搜索
+.narrow {
+  .row,
+  &.row {
+    @include make-row($narrow-grid-gutter-width);
+  }
+  @include make-narrow-grid-columns;
+}

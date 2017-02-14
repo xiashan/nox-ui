@@ -17,18 +17,24 @@
 @import "bootstrap/scaffolding";
 @import "bootstrap/type";
 @import "bootstrap/grid";
-@import "bootstrap/tables";
 @import "bootstrap/forms";
 @import "bootstrap/buttons";
+@import "bootstrap/input-groups";
 
 // Components
+@import "bootstrap/dropdowns";
 @import "bootstrap/component-animations";
 @import "bootstrap/navs";
-@import "bootstrap/pagination";
 @import "bootstrap/close";
-@import "bootstrap/header";
-@import "bootstrap/sidebar";
-@import "bootstrap/select2";
+@import "bootstrap/modal";
+@import "bootstrap/datetimepicker";
+//@import "bootstrap/select2";
+@import "bootstrap/tables";
+@import "bootstrap/upload";
+@import "bootstrap/process-bar";
+@import "bootstrap/tooltip";
+@import "bootstrap/popovers";
+@import "bootstrap/pagination";
 
 // Components w/ JavaScript
 

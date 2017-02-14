@@ -16,7 +16,7 @@ $brand-danger:          #d66262 !default;
 $gray-bd:               #f1f2f4 !default; // 系统中边框颜色
 $gray-bd-darker:        #e5e7eb !default; // 表单边框颜色
 $gray-bg:               #f7f8fa !default; // 灰色背景颜色
-$gray-bg-lighter:       #f8f9fb !default; // 灰色按钮颜色
+$gray-bg-lighter:       #f8f9fb !default; // 灰色按钮颜色,禁用元素等
 
 
 //== Scaffolding
@@ -46,18 +46,22 @@ $font-size-large:         16px !default;
 $font-size-larger:        20px !default;
 $font-size-small:         12px !default;
 
-$font-size-h1:            36px !default;
-$font-size-h2:            30px !default;
-$font-size-h3:            24px !default;
-$font-size-h4:            18px !default;
+$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.42)) !default; // ~20px
+$font-size-h4:            ceil(($font-size-base * 1.14)) !default; // ~16px
 $font-size-h5:            $font-size-base !default;
-$font-size-h6:            12px !default;
+$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
 
 //** Unit-less `line-height` for use in components like buttons.
-$line-height-base:        1.428571429 !default; // 20/14
+$line-height-base:        1.42857143 !default; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
+$headings-font-family:    inherit !default;
+$headings-font-weight:    500 !default;
+$headings-line-height:    1.1 !default;
+$headings-color:          inherit !default;
 
 //== Iconography
 //
@@ -79,34 +83,33 @@ $icon-font-svg-id:        "icomoon" !default;
 //
 //## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
 
-$padding-base-vertical:     8px !default;
-$padding-base-horizontal:   12px !default;
+$padding-base-vertical:     9px !default;
+$padding-base-horizontal:   20px !default;
 
-$padding-large-vertical:    10px !default;
-$padding-large-horizontal:  16px !default;
+$padding-large-vertical:    13px !default;
+$padding-large-horizontal:  40px !default;
 
 $padding-small-vertical:    5px !default;
-$padding-small-horizontal:  10px !default;
+$padding-small-horizontal:  20px !default;
 
-$padding-xs-vertical:       1px !default;
+$padding-xs-vertical:       3px !default;
 $padding-xs-horizontal:     5px !default;
 
 $line-height-large:         1.3333333 !default; // extra decimals for Win 8.1 Chrome
-$line-height-small:         1.5 !default;
+$line-height-small:         1.4444444 !default;
 
-$border-radius-base:        4px !default;
-$border-radius-large:       6px !default;
-$border-radius-small:       2px !default;
+$border-radius-base:        2px !default;
+$border-radius-large:       4px !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    #fff !default;
 //** Global background color for active items (e.g., navs or dropdowns).
 $component-active-bg:       $brand-primary !default;
 
-$headings-font-family:    inherit !default;
-$headings-font-weight:    500 !default;
-$headings-line-height:    1.1 !default;
-$headings-color:          inherit !default;
+//** Width of the `border` for generating carets that indicate dropdowns.
+$caret-width-base:          4px !default;
+//** Carets increase slightly in size for larger components.
+$caret-width-large:         5px !default;
 
 //== Buttons
 //
@@ -128,7 +131,6 @@ $btn-success-border:             $btn-success-bg !default;
 
 $btn-info-color:                 #fff !default;
 $btn-info-bg:                    $brand-info !default;
-// $btn-info-border:                $btn-info-bg, 5% !default;
 $btn-info-border:                $btn-info-bg !default;
 
 $btn-warning-color:              #fff !default;
@@ -142,7 +144,6 @@ $btn-danger-border:              $btn-danger-bg !default;
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius-base:         $border-radius-base !default;
 $btn-border-radius-large:        $border-radius-large !default;
-$btn-border-radius-small:        $border-radius-small !default;
 
 
 //== Forms
@@ -156,7 +157,6 @@ $input-border:                   $gray-bd-darker !default;
 
 $input-border-radius:            $border-radius-base !default;
 $input-border-radius-large:      $border-radius-large !default;
-$input-border-radius-small:      $border-radius-small !default;
 
 //** Border color for inputs on focus
 $input-border-focus:             #999 !default;
@@ -165,16 +165,25 @@ $input-border-focus:             #999 !default;
 $input-color-placeholder:        #999 !default;
 
 //** Default `.form-control` height
-$input-height-base:              40px !default;
+$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default; // ~40
 //** Large `.form-control` height
-$input-height-small:             32px !default;
+$input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2)) !default; //~48
+$input-height-small:             (floor($font-size-base * $line-height-small) + ($padding-small-vertical * 2) + 2) !default; //~32
 
 //** `.form-group` margin
 $form-group-margin-bottom:       16px !default;
 
+$padding-input-horizontal-base: $padding-base-horizontal - 10;
+$padding-input-horizontal-large: $padding-large-horizontal - 20;
+
 //** Disabled cursor for form controls and buttons.
 $cursor-disabled:                not-allowed !default;
 
+//
+// Input groups
+// --------------------------------------------------
+$input-group-addon-bg: $gray-bg;
+$input-group-addon-border-color: $gray-bd-darker;
 
 //-- Z-index master list
 //
@@ -183,9 +192,145 @@ $cursor-disabled:                not-allowed !default;
 //
 // Note: These variables are not generated into the Customizer.
 
+$zindex-dropdown:          1000 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
+$zindex-navbar-fixed:      1030 !default;
 $zindex-modal-background:  1040 !default;
 $zindex-modal:             1050 !default;
 
+//== Dropdowns
+//
+//## Dropdown menu container and contents.
+
+//** Background for the dropdown menu.
+$dropdown-bg:                    #fff !default;
+//** Dropdown menu `border-color`.
+$dropdown-border:                $gray-bd !default;
+//** Dropdown menu `border-color` **for IE8**.
+$dropdown-fallback-border:       #ccc !default;
+//** Divider color for between dropdown items.
+$dropdown-divider-bg:            $gray-bg !default;
+
+//** Dropdown link text color.
+$dropdown-link-color:            $text-color !default;
+//** Hover color for dropdown links.
+$dropdown-link-hover-color:      $link-color !default;
+//** Hover background for dropdown links.
+$dropdown-link-hover-bg:         $gray-bg !default;
+
+//** Active dropdown menu item text color.
+$dropdown-link-active-color:     $component-active-color !default;
+//** Active dropdown menu item background color.
+$dropdown-link-active-bg:        $component-active-bg !default;
+
+//** Disabled dropdown menu item background color.
+$dropdown-link-disabled-color:   $text-color-lighter !default;
+
+//** Text color for headers within dropdown menus.
+$dropdown-header-color:          $text-color-darker !default;
+
+//** Deprecated `$dropdown-caret-color` as of v3.1.0
+$dropdown-caret-color:           #000 !default;
+
+//
+// Tables
+// --------------------------------------------------
+
+$table-cell-padding:            12px !default;
+//** Padding for cells in `.table-condensed`.
+$table-condensed-cell-padding:  5px !default;
+//** Default background color used for all tables.
+$table-bg:                      transparent !default;
+//** Background color used for `.table-striped`.
+$table-bg-accent:               $gray-bg-lighter !default;
+//** Background color used for `.table-hover`.
+$table-bg-hover:                $gray-bg-lighter !default;
+$table-bg-active:               $gray-bg-lighter !default;
+//** Border color for table and cell borders.
+$table-border-color:            $gray-bd;
+
+//
+// Navs
+// --------------------------------------------------
+
+$nav-tabs-border-width: 1px;
+$nav-tabs-border-color: $gray-bd;
+$nav-item-margin: 8px;
+$nav-link-padding: 16px;
+
+//== Progress bars
+// --------------------------------------------------
+
+// Bar itself
+// -------------------------
+$progress-bg:                 #f5f5f5;
+$progress-bar-color:          #fff;
+$progress-border-radius:      2px;
+$progress-height:             8px;
+
+$progress-bar-bg:             $brand-primary;
+$progress-bar-success-bg:     $brand-success;
+$progress-bar-warning-bg:     $brand-warning;
+$progress-bar-danger-bg:      $brand-danger;
+
+
+//== Modals
+// --------------------------------------------------
+$modal-backdrop-bg: rgba(0,0,0,.5);
+$modal-content-bg: #fff;
+$modal-content-border-color: rgba(0,0,0,.2);
+$modal-title-color: $brand-primary;
+$modal-inner-padding: 16px;
+$modal-lg: 614px;
+$modal-md: 480px;
+$modal-sm: 300px;
+
+//== Tooltips
+//
+//##
+
+//** Tooltip max width
+$tooltip-max-width:           200px !default;
+//** Tooltip text color
+$tooltip-color:               #fff !default;
+//** Tooltip background color
+$tooltip-bg:                  #000 !default;
+$tooltip-opacity:             .9 !default;
+
+//** Tooltip arrow width
+$tooltip-arrow-width:         5px !default;
+//** Tooltip arrow color
+$tooltip-arrow-color:         $tooltip-bg !default;
+
+
+//== Popovers
+//
+//##
+
+//** Popover body background color
+$popover-bg:                          #fff !default;
+//** Popover maximum width
+$popover-max-width:                   276px !default;
+//** Popover border color
+$popover-border-color:                $gray-bd !default;
+//** Popover fallback border color
+$popover-fallback-border-color:       #ccc !default;
+
+//** Popover title background color
+$popover-title-bg:                    darken($popover-bg, 3%) !default;
+
+//** Popover arrow width
+$popover-arrow-width:                 10px !default;
+//** Popover arrow color
+$popover-arrow-color:                 $popover-bg !default;
+
+//** Popover outer arrow width
+$popover-arrow-outer-width:           ($popover-arrow-width + 1) !default;
+//** Popover outer arrow color
+$popover-arrow-outer-color:           $gray-bd !default;
+//** Popover outer arrow fallback color
+$popover-arrow-outer-fallback-color:  darken($popover-fallback-border-color, 20%) !default;
 
 //== Media queries breakpoints
 //
@@ -233,6 +378,7 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 //** Number of columns in the grid.
 $grid-columns:              12 !default;
 //** Padding between columns. Gets divided in half for the left and right.
+$narrow-grid-gutter-width:  8px !default;
 $grid-gutter-width:         32px !default;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.

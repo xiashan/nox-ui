@@ -21,6 +21,7 @@
   border: 1px solid $popover-fallback-border-color;
   border: 1px solid $popover-border-color;
   border-radius: $border-radius-base;
+  outline: none;
 
   // Offset the popover to account for the popover arrow
   &.top     { margin-top: -$popover-arrow-width; }

@@ -30,6 +30,7 @@
 
 .timepicker.dropdown-menu,
 .datepicker.dropdown-menu {
+  min-width: 300px;
   button {
     border: 1px solid transparent;
   }
@@ -50,7 +51,6 @@
     &:hover {
       color: #333;
       background-color: #fff;
-      border-color: $gray-bd;
     }
   }
 

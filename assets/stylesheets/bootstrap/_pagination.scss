@@ -9,8 +9,9 @@
       display: inline-block;
       margin-left: 8px;
       border: 1px solid $gray-bd;
-      padding: 5px 11px;
-      border-radius: $border-radius-large;
+      padding: 1px 7px;
+      font-size: 12px;
+      border-radius: $border-radius-base;
       user-select: none;
       -webkit-user-select: none;
       cursor: pointer;
@@ -28,11 +29,17 @@
     background-color: $brand-primary;
     border: 1px solid $brand-primary;
   }
-}
-
-.pagination .no-items {
-  padding: 24px;
-  i {
-    font-size: 24px;
+  .separate {
+    border: none;
+  }
+  .no-items {
+    padding: 96px;
+    i {
+      font-size: 24px;
+    }
+  }
+  .ball-loading {
+    padding: 96px 0;
   }
 }
+

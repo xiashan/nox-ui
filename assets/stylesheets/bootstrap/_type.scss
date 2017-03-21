@@ -101,6 +101,8 @@ mark,
 
 @include text-emphasis-variant('.text-weak', $text-color-lighter);
 
+@include text-emphasis-variant('.text-strong', $text-color-darker);
+
 @include text-emphasis-size('.text-large', $font-size-large);
 
 @include text-emphasis-size('.text-larger', $font-size-larger);

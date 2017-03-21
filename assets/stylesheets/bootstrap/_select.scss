@@ -1,0 +1,16 @@
+.select-down {
+  text-align: left;
+  .select-arrow {
+    display: inline-block;
+    width: 32px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    background-clip: padding-box;
+  }
+  + .dropdown-menu {
+
+  }
+}

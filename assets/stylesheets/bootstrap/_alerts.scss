@@ -1,0 +1,65 @@
+//
+// Alerts
+// --------------------------------------------------
+
+
+// Base styles
+// -------------------------
+
+.alert {
+  padding: 16px;
+  margin: 16px;
+  border: 1px solid $gray-bd-darker;
+  border-radius: $border-radius-base;
+
+  background-color: $gray-bg;
+  color: $text-color;
+
+  // Headings for larger alerts
+  h4 {
+    margin-top: 0;
+    // Specified for the h4 to prevent conflicts of changing $headings-color
+    color: inherit;
+  }
+
+  // Improve alignment and spacing of inner content
+  > p,
+  > ul {
+    margin-bottom: 0;
+  }
+
+  > p + p {
+    margin-top: 5px;
+  }
+}
+
+// Dismissible alerts
+//
+// Expand the right padding and account for the close button's positioning.
+
+.alert-dismissible {
+  padding-right: 32px;
+
+  // Adjust close link position
+  .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    color: inherit;
+  }
+}
+
+.alert.top {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 90%;
+}
+
+@media (min-width: $screen-md-min) {
+  .alert.top {
+    width: 480px;
+  }
+}

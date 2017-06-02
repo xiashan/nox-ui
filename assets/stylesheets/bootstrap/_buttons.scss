@@ -77,6 +77,10 @@ a.btn {
 .btn-danger {
   @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
 }
+// ghost as transparent
+.btn-ghost{
+  @include button-variant($btn-ghost-color, $btn-ghost-bg, $btn-ghost-border);
+}
 
 
 // Link buttons

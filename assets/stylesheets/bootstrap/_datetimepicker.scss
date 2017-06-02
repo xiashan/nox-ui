@@ -28,9 +28,8 @@
   }
 }
 
-.timepicker.dropdown-menu,
-.datepicker.dropdown-menu {
-  min-width: 300px;
+.timepicker,
+.datepicker {
   button {
     border: 1px solid transparent;
   }
@@ -38,8 +37,15 @@
   @include button-class('.btn-default', #333, #fff);
   @include button-class('.btn-primary', #fff, $brand-primary);
   @include button-class('.btn-info', #fff, $brand-info);
+  @include button-class('.btn-range', #fff, $brand-primary);
+  @include button-class('.btn-success', #fff, $brand-success);
+  @include button-class('.btn-both', #fff, #28a8b1);
 
-  .pull-left, .pull-right {
+  .btn-range {
+    opacity: 0.5;
+  }
+
+  .arrow {
     height: 32px;
     line-height: 32px;
     text-align: center;
@@ -71,10 +77,41 @@
     -moz-osx-font-smoothing: grayscale;
     margin-top:8px;
   }
+
+  tbody button {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
 }
 
-.timepicker.dropdown-menu tbody button,
-.datepicker.dropdown-menu tbody button {
-  padding-left: 6px;
-  padding-right: 6px;
+.rangedatepicker {
+  padding: 16px;
+  .range {
+    float: left;
+    width: 250px;
+    > div {
+      margin-bottom: 16px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .btn-default {
+      &:active {
+        color: $brand-primary;
+        background-color: #f8f9fb;
+        border-color: #e5e7eb;
+      }
+    }
+  }
+  .datepicker {
+    float: left;
+    margin-left: 16px;
+    width: 262px;
+    > div {
+      border: 1px solid $gray-bd;
+      border-radius: 4px;
+      padding: 4px 8px;
+      height: 266px;
+    }
+  }
 }

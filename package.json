@@ -1,6 +1,6 @@
 {
   "name": "nox-ui",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "dependencies": {},
   "scripts": {
     "start": "gulp"
@@ -12,5 +12,23 @@
   },
   "engines": {
     "node": ">=0.10.0"
-  }
+  },
+  "description": "nox ui for SPA",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiashan/nox-ui.git"
+  },
+  "keywords": [
+    "nox-ui"
+  ],
+  "author": "xiashan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiashan/nox-ui/issues"
+  },
+  "homepage": "https://github.com/xiashan/nox-ui#readme"
 }

@@ -84,6 +84,17 @@
   }
 }
 
+.datepicker {
+  width: 320px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.datetimepicker-mode-0 {
+  width: 180px;
+  min-width: 180px;
+}
+
 .rangedatepicker {
   padding: 16px;
   .range {

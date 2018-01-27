@@ -3,11 +3,11 @@
   // Import the fonts
   @font-face {
     font-family: 'icomoon';
-    src: url('#{$icon-font-path}#{$icon-font-name}.eot?q3dp7h');
-    src: url('#{$icon-font-path}#{$icon-font-name}.eot?q3dp7h#iefix') format('embedded-opentype'),
-         url('#{$icon-font-path}#{$icon-font-name}.ttf?q3dp7h') format('truetype'),
-         url('#{$icon-font-path}#{$icon-font-name}.woff?q3dp7h') format('woff'),
-         url('#{$icon-font-path}#{$icon-font-name}.svg?q3dp7h#{$icon-font-svg-id}') format('svg');
+    src: url('#{$icon-font-path}#{$icon-font-name}.eot?m86qyo');
+    src: url('#{$icon-font-path}#{$icon-font-name}.eot?m86qyo#iefix') format('embedded-opentype'),
+         url('#{$icon-font-path}#{$icon-font-name}.ttf?m86qyo') format('truetype'),
+         url('#{$icon-font-path}#{$icon-font-name}.woff?m86qyo') format('woff'),
+         url('#{$icon-font-path}#{$icon-font-name}.svg?m86qyo#{$icon-font-svg-id}') format('svg');
   }
 }
 
@@ -26,12 +26,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.nox-pause:before {
-  content: "\e903";
-}
-.nox-target:before {
-  content: "\e95b";
-}
 .nox-anchor:before {
   content: "\e900";
 }
@@ -42,7 +36,7 @@
   content: "\e902";
 }
 .nox-calendar:before {
-  content: "\1f4c8";
+  content: "\e903";
 }
 .nox-callback:before {
   content: "\e904";
@@ -161,149 +155,162 @@
 .nox-more-circle-o:before {
   content: "\e92a";
 }
-.nox-pcdownload:before {
+.nox-pause:before {
   content: "\e92b";
 }
-.nox-pcgame:before {
+.nox-pcdownload:before {
   content: "\e92c";
 }
-.nox-phone-line:before {
+.nox-pcgame:before {
   content: "\e92d";
 }
-.nox-plane:before {
+.nox-phone-line:before {
   content: "\e92e";
 }
-.nox-play-circle-o:before {
+.nox-photo:before {
   content: "\e92f";
 }
-.nox-play-circle:before {
+.nox-plane:before {
   content: "\e930";
 }
-.nox-play:before {
+.nox-play-circle-o:before {
   content: "\e931";
 }
-.nox-plus-circle-o:before {
+.nox-play-circle:before {
   content: "\e932";
 }
-.nox-plus-circle:before {
+.nox-play:before {
   content: "\e933";
 }
-.nox-plus:before {
+.nox-plus-circle-o:before {
   content: "\e934";
 }
-.nox-porker:before {
+.nox-plus-circle:before {
   content: "\e935";
 }
-.nox-qq:before {
+.nox-plus:before {
   content: "\e936";
 }
-.nox-question-circle-o:before {
+.nox-porker:before {
   content: "\e937";
 }
-.nox-question-circle:before {
+.nox-qq:before {
   content: "\e938";
 }
-.nox-question:before {
+.nox-question-circle-o:before {
   content: "\e939";
 }
-.nox-qun:before {
+.nox-question-circle:before {
   content: "\e93a";
 }
-.nox-race:before {
+.nox-question:before {
   content: "\e93b";
 }
-.nox-radar:before {
+.nox-qun:before {
   content: "\e93c";
 }
-.nox-recharge:before {
+.nox-race:before {
   content: "\e93d";
 }
-.nox-refresh:before {
+.nox-radar:before {
   content: "\e93e";
 }
-.nox-remove-circle-o:before {
+.nox-recharge:before {
   content: "\e93f";
 }
-.nox-remove-circle:before {
+.nox-refresh:before {
   content: "\e940";
 }
-.nox-remove:before {
+.nox-remove-circle-o:before {
   content: "\e941";
 }
-.nox-rmb:before {
+.nox-remove-circle:before {
   content: "\e942";
 }
-.nox-run:before {
+.nox-remove:before {
   content: "\e943";
 }
-.nox-save:before {
+.nox-rmb:before {
   content: "\e944";
 }
-.nox-search:before {
+.nox-run:before {
   content: "\e945";
 }
-.nox-share:before {
+.nox-save:before {
   content: "\e946";
 }
-.nox-skype:before {
+.nox-search:before {
   content: "\e947";
 }
-.nox-sort-down:before {
+.nox-setting:before {
   content: "\e948";
 }
-.nox-sort-left:before {
+.nox-share:before {
   content: "\e949";
 }
-.nox-sort-right:before {
+.nox-skype:before {
   content: "\e94a";
 }
-.nox-sort-up:before {
+.nox-sort-down:before {
   content: "\e94b";
 }
-.nox-star-empty:before {
+.nox-sort-left:before {
   content: "\e94c";
 }
-.nox-star-full-half:before {
+.nox-sort-right:before {
   content: "\e94d";
 }
-.nox-star-full:before {
+.nox-sort-up:before {
   content: "\e94e";
 }
-.nox-time:before {
+.nox-star-empty:before {
   content: "\e94f";
 }
-.nox-tool:before {
+.nox-star-full-half:before {
   content: "\e950";
 }
-.nox-trand:before {
+.nox-star-full:before {
   content: "\e951";
 }
-.nox-trash:before {
+.nox-target:before {
   content: "\e952";
 }
-.nox-twitter:before {
+.nox-time:before {
   content: "\e953";
 }
-.nox-update:before {
+.nox-tool:before {
   content: "\e954";
 }
-.nox-upload:before {
+.nox-trand:before {
   content: "\e955";
 }
-.nox-user:before {
+.nox-trash:before {
   content: "\e956";
 }
-.nox-usercheck:before {
+.nox-twitter:before {
   content: "\e957";
 }
-.nox-weibo:before {
+.nox-update:before {
   content: "\e958";
 }
-.nox-weixin:before {
+.nox-upload:before {
   content: "\e959";
 }
-.nox-wifi:before {
+.nox-user:before {
   content: "\e95a";
 }
-
-
+.nox-usercheck:before {
+  content: "\e95b";
+}
+.nox-video-cicle:before {
+  content: "\e95c";
+}
+.nox-weibo:before {
+  content: "\e95d";
+}
+.nox-weixin:before {
+  content: "\e95e";
+}
+.nox-wifi:before {
+  content: "\e95f";
+}

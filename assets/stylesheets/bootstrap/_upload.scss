@@ -147,3 +147,47 @@ ul.upload-image-list {
   top: 0;
   cursor: pointer;
 }
+
+.upload-file {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding: 0 16px;
+  margin: 0 0 8px!important;
+
+  .upload-file-name,
+  .upload-file-process,
+  .upload-file-remove {
+    line-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #666
+  }
+
+  .upload-file-process {
+    .progress {
+      width: calc(100% - 110px);
+      display: inline-block
+    }
+  }
+
+  .upload-file-error {
+    color: #d66262
+  }
+
+  .upload-file-remove {
+    text-align: right;
+    cursor: pointer
+  }
+
+  .upload-file-operate {
+    line-height: 40px;
+    color: #7ab1d1;
+    text-align: right
+  }
+
+  .progress-val {
+    font-size: 12px
+  }
+}
+

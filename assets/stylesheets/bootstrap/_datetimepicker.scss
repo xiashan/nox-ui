@@ -123,6 +123,10 @@
       border-radius: 4px;
       padding: 4px 8px;
       height: 266px;
+
+      &.rangedatepicker-mode-1 {
+        height: 146px;
+      }
     }
   }
 }

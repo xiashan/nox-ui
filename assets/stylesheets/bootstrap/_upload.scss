@@ -1,6 +1,6 @@
 /*****************上传图片相关样式*******************/
 // 图片列表,如果只有一个可以不用列表
-ul.upload-image-list {
+.upload-image-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -25,9 +25,8 @@ ul.upload-image-list {
     cursor: pointer;
     background-color: $brand-danger;
     color: #fff;
-    width: 14px;
-    height: 14px;
-    font-size: 12px;
+    width: 16px;
+    height: 16px;
     padding-top: 1px;
     padding-left: 1px;
   }
@@ -54,21 +53,21 @@ ul.upload-image-list {
 }
 @mixin get-image-wrapper {
   border: 1px dashed $gray-bd-darker;
-  padding: 7px;
+  padding: 15px;
 }
 // 进度条&错误提示
 .upload-image-process {
   @include  get-image-wrapper();
   & .progress {
     // 改变大小时需要重新定义
-    margin-top: 27px;
+    margin-top: 20px;
   }
   & .upload-error {
     text-align: center;
     word-break: break-all;
     height: 100%;
     // 改变大小时需要重新定义
-    line-height: 64px;
+    line-height: 48px;
     & span {
       display: inline-block;
       vertical-align: middle;
@@ -90,7 +89,8 @@ ul.upload-image-list {
     display: block;
     text-align: center;
     // 改变大小时需要重新定义
-    margin-top: 20px;
+    margin-top: 12px;
+    font-size: 16px;
   }
   & .upload-image-btn {
     width: 100%;
@@ -118,18 +118,15 @@ ul.upload-image-list {
   height: 120px;
   & .upload-image-show {
     line-height: 120px;
-    .icon-remove {
-//      top: -48px;
-    }
   }
   .progress {
-    margin-top: 48px;
+    margin-top: 41px;
   }
   .upload-error {
-    line-height: 102px;
+    line-height: 88px;
   }
   & .upload-image-add > span {
-    margin-top: 40px;
+    margin-top: 32px;
   }
   + .upload-file-desc {
     width: 120px;
@@ -161,7 +158,7 @@ ul.upload-image-list {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    color: #666
+    color: #666;
   }
 
   .upload-file-process {
@@ -172,7 +169,7 @@ ul.upload-image-list {
   }
 
   .upload-file-error {
-    color: #d66262
+    color: $brand-danger;
   }
 
   .upload-file-remove {
@@ -180,14 +177,8 @@ ul.upload-image-list {
     cursor: pointer
   }
 
-  .upload-file-operate {
-    line-height: 40px;
-    color: #7ab1d1;
-    text-align: right
-  }
-
   .progress-val {
-    font-size: 12px
+    font-size: 12px;
   }
 }
 

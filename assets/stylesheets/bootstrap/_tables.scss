@@ -12,7 +12,7 @@ th {
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: $line-height-computed;
+  margin-bottom: 16px;
   // Cells
   > thead,
   > tbody,
@@ -20,35 +20,22 @@ th {
     > tr {
       > th,
       > td {
-        padding: $table-cell-padding;
-        line-height: $line-height-base;
+        padding: $table-cell-padding-vertical $table-cell-padding-horizontal;
+        line-height: $line-height-large;
         vertical-align: middle;
-        border-top: 1px solid $table-border-color;
+        border-bottom: 1px solid $table-border-color;
+        font-weight: normal;
       }
     }
   }
   // Bottom align for column headings
   > thead > tr > th {
     vertical-align: bottom;
-    background-color: $gray-bg;
+    padding: $table-title-padding-vertical $table-cell-padding-horizontal;
+    background-color: $table-title-bg;
     font-weight: normal;
-    color: $text-color-lighter;
-  }
-  // Remove top border from thead by default
-  > caption + thead,
-  > colgroup + thead,
-  > thead:first-child,
-  > tbody {
-    > tr:first-child {
-      > th,
-      > td {
-        border-top: 0;
-      }
-    }
-  }
-  // Account for multiple tbody instances
-  > tbody + tbody {
-    border-top: 1px solid $table-border-color;
+    color: $table-title-color;
+    border-bottom: none;
   }
 
   // Nesting
@@ -67,7 +54,7 @@ th {
     > tr {
       > th,
       > td {
-        padding: $table-condensed-cell-padding;
+        padding: $table-condensed-cell-padding $table-cell-padding-horizontal;
       }
     }
   }
@@ -80,6 +67,9 @@ th {
 
 .table-bordered {
   border: 1px solid $table-border-color;
+  > thead > tr > th {
+    border-bottom: 1px solid $table-border-color;
+  }
 }
 
 
@@ -101,6 +91,28 @@ th {
 .table-hover {
   > tbody > tr:hover {
     background-color: $table-bg-hover;
+  }
+}
+
+// 表头排序
+.table-sort {
+  thead > tr > th,
+  thead > tr > td {
+    position: relative;
+    padding-right: 16px;
+    cursor: pointer;
+  }
+  .sorter {
+    position: absolute;
+    right: 2px;
+    bottom: 12px;
+    i {
+      height: 10px;
+      display: block;
+      &.active {
+        color: $brand-primary;
+      }
+    }
   }
 }
 

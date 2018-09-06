@@ -44,7 +44,7 @@
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: 10px;
+  margin: 10px; // 小屏幕全屏展示弹窗
   background-color: $modal-content-bg;
   border: 1px solid $modal-content-border-color;
   border-radius: $border-radius-large;
@@ -56,16 +56,17 @@
 // Modal header
 // Top section of the modal w/ title and dismiss
 .modal-header {
-  padding: 20px $modal-inner-padding;
-}
-// Close icon
-.modal-header .close {
-  margin-top: -2px;
-}
-
-// Title text within header
-.modal-title {
-  margin: 0;
+  padding: 0 $modal-inner-padding;
+  // Title text within header
+  .modal-title {
+    margin: 0;
+    font-size: 20px;
+    line-height: 56px;
+    display: inline-block;
+  }
+  .close {
+    margin-top: 17px;
+  }
 }
 
 // Modal body
@@ -73,27 +74,60 @@
 .modal-body {
   position: relative;
   margin: 0 $modal-inner-padding;
-  border-top: 1px solid $gray-bd;
   border-bottom: 1px solid $gray-bd;
+}
+
+// 一种提示信息的表单类型
+.modal-alert {
+  border: 1px solid $gray-bd;
+  border-bottom: none;
+  text-align: center;
+  padding: 28px 0;
+  .alert-info, .alert-hint {
+    line-height: 20px;
+    margin-bottom: 0;
+  }
+  .alert-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+  }
+  .alert-icon {
+    font-size: 96px;
+  }
+  .alert-hint {
+    margin-top: 26px;
+  }
 }
 
 // Footer (for actions)
 .modal-footer {
   padding: $modal-inner-padding;
-  text-align: right; // right align buttons
+  text-align: center;
 
   // Properly space out buttons
   .btn + .btn {
-    margin-left: 5px;
+    margin-left: 16px;
     margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
-  }
-  // but override that for button groups
-  .btn-group .btn + .btn {
-    margin-left: -1px;
   }
   // and override it for block buttons as well
   .btn-block + .btn-block {
     margin-left: 0;
+  }
+  // 并排通栏的按钮样式
+  .row {
+    margin-left: -8px;
+    margin-right: -8px;
+    [class^=col-] {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+
+  // footer是文本提示
+  .footer-text {
+    line-height: 48px;
   }
 }
 

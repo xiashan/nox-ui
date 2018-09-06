@@ -6,33 +6,43 @@
   #{$parent} {
     color: $color;
     background-color: $background-color;
+    border-color: $background-color;
     @if ($parent == '.btn-default') {
       &:hover {
         color: #fff;
         background-color: $brand-primary;
-        border-color: transparent;
+        border-color: $brand-primary;
       }
     }
     @else {
       &:hover {
         color: $color;
         background-color: $background-color;
+        border-color: $background-color;
       }
     }
     &:disabled {
       &:hover {
         color: $color;
         background-color: $background-color;
+        border-color: $background-color;
       }
     }
   }
 }
 
+.datepicker {
+  width: 256px !important;
+  padding: 8px !important;
+}
+
 .timepicker,
 .datepicker {
-  button {
-    border: 1px solid transparent;
-  }
+  overflow: hidden;
+
+  //button {
+  //  border: 1px solid transparent;
+  //}
 
   @include button-class('.btn-default', #333, #fff);
   @include button-class('.btn-primary', #fff, $brand-primary);
@@ -45,58 +55,70 @@
     opacity: 0.5;
   }
 
+  // 星期的样式
+  .dow {
+    font-size: 14px;
+    font-weight: normal;
+    color: #999;
+  }
+
   .arrow {
-    height: 32px;
-    line-height: 32px;
-    text-align: center;
-    padding: 0 8px;
-    color: #333;
-    background-color: #fff;
-    vertical-align: middle;
+    padding: 0;
     width: 32px;
+    margin: 0 1px;
     &:hover {
       color: #333;
-      background-color: #fff;
+      background-color: transparent;
+      border-color: transparent;
+    }
+    i {
+      font-size: 16px;
+      line-height: 30px;
     }
   }
 
-  thead th button:hover {
-    color: #333;
-    background-color: #fff;
-    border-color: $gray-bd;
-  }
-
-  i {
-    position: relative;
-    top: 1px;
+  // 日期显示固定尺寸
+  tbody button,
+  tbody .time-separator {
     display: inline-block;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    margin-top:8px;
-  }
-
-  tbody button {
-    padding-left: 6px;
-    padding-right: 6px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0;
+    margin: 1px;
   }
 }
 
-.datepicker {
-  width: 320px;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
+// 显示分钟
 .datetimepicker-mode-0 {
-  width: 180px;
-  min-width: 180px;
+  width: 188px !important;
+}
+
+// 显示月份
+.datetimepicker-mode-2,
+// 显示年份
+.datetimepicker-mode-3 {
+  table {
+    margin-left: -5px;
+  }
+  tbody button {
+    width: 48px;
+    margin: 1px 7px;
+  }
+  .arrow {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
 }
 
 .rangedatepicker {
-  padding: 16px;
+  width: 860px !important;
+  padding: 0 24px !important;
+  .range-title {
+    text-align: center;
+    line-height: 72px;
+    margin-bottom: 0;
+  }
   .range {
     float: left;
     width: 250px;
@@ -114,19 +136,13 @@
       }
     }
   }
-  .datepicker {
+  .range-date {
     float: left;
-    margin-left: 16px;
-    width: 262px;
+    margin-left: 24px;
+    width: 256px;
     > div {
       border: 1px solid $gray-bd;
       border-radius: 4px;
-      padding: 4px 8px;
-      height: 266px;
-
-      &.rangedatepicker-mode-1 {
-        height: 146px;
-      }
     }
   }
 }

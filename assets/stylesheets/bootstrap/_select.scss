@@ -1,3 +1,4 @@
+// 下拉选择样式
 .select-down {
   text-align: left;
   .select-arrow {
@@ -9,8 +10,5 @@
     top: 0;
     text-align: center;
     background-clip: padding-box;
-  }
-  + .dropdown-menu {
-
   }
 }

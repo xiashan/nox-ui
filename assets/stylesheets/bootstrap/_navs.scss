@@ -25,11 +25,30 @@
 
     &.active {
       background-color: transparent;
+      .nav-link {
+        color: $nav-link-active-color;
+      }
+      .arrow {
+        display: block;
+      }
     }
+
     &.disabled {
       .nav-link {
         color: #ccc;
         cursor: default;
+      }
+    }
+
+    .nav-link {
+      display: block;
+      color: $nav-link-color;
+      padding: $nav-link-padding;
+      cursor: pointer;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $nav-link-active-color;
       }
     }
 
@@ -61,29 +80,8 @@
       border-bottom-color: #fff;
       margin-left: -7px;
     }
-
   }
-
-  .nav-link {
-    display: block;
-    color: $text-color-lighter;
-    padding: $nav-link-padding;
-    cursor: pointer;
-    &:hover {
-      text-decoration: none;
-      color: $brand-primary;
-    }
-  }
-
-  .nav-item.active .nav-link {
-    color: $brand-primary;
-  }
-  .nav-item.active .arrow {
-    display: block;
-  }
-
 }
-
 
 //
 // Tabbable tabs

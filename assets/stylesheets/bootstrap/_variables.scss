@@ -83,6 +83,7 @@ $icon-font-svg-id:        "icomoon" !default;
 //
 //## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
 
+// small,base,large字号都是一样的（虽然有点不太符合常规），通过padding来调节高度
 $padding-base-vertical:     9px !default;
 $padding-base-horizontal:   20px !default;
 
@@ -95,21 +96,16 @@ $padding-small-horizontal:  20px !default;
 $padding-xs-vertical:       3px !default;
 $padding-xs-horizontal:     5px !default;
 
-$line-height-large:         1.3333333 !default; // extra decimals for Win 8.1 Chrome
-$line-height-small:         1.4444444 !default;
+$line-height-large:         1.714285714 !default; // ~24px
 
 $border-radius-base:        2px !default;
 $border-radius-large:       4px !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
-$component-active-color:    #fff !default;
+$component-active-color:    $brand-primary !default;
 //** Global background color for active items (e.g., navs or dropdowns).
-$component-active-bg:       $brand-primary !default;
+$component-active-bg:       $body-bg !default;
 
-//** Width of the `border` for generating carets that indicate dropdowns.
-$caret-width-base:          4px !default;
-//** Carets increase slightly in size for larger components.
-$caret-width-large:         5px !default;
 
 //== Buttons
 //
@@ -171,13 +167,13 @@ $input-color-placeholder:        #999 !default;
 //** Default `.form-control` height
 $input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default; // ~40
 //** Large `.form-control` height
-$input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2)) !default; //~48
-$input-height-small:             (floor($font-size-base * $line-height-small) + ($padding-small-vertical * 2) + 2) !default; //~32
+$input-height-large:             ($line-height-computed + ($padding-large-vertical * 2) + 2) !default; //~48
+$input-height-small:             ($line-height-computed + ($padding-small-vertical * 2) + 2) !default; //~32
 
 //** `.form-group` margin
 $form-group-margin-bottom:       16px !default;
 
-$padding-input-horizontal-base: $padding-base-horizontal - 10;
+$padding-input-horizontal-base:  $padding-base-horizontal - 10;
 $padding-input-horizontal-large: $padding-large-horizontal - 20;
 
 //** Disabled cursor for form controls and buttons.
@@ -211,15 +207,13 @@ $zindex-modal:             1050 !default;
 $dropdown-bg:                    #fff !default;
 //** Dropdown menu `border-color`.
 $dropdown-border:                $gray-bd !default;
-//** Dropdown menu `border-color` **for IE8**.
-$dropdown-fallback-border:       #ccc !default;
 //** Divider color for between dropdown items.
 $dropdown-divider-bg:            $gray-bg !default;
 
 //** Dropdown link text color.
 $dropdown-link-color:            $text-color !default;
 //** Hover color for dropdown links.
-$dropdown-link-hover-color:      $link-color !default;
+$dropdown-link-hover-color:      $text-color !default;
 //** Hover background for dropdown links.
 $dropdown-link-hover-bg:         $gray-bg !default;
 
@@ -231,19 +225,16 @@ $dropdown-link-active-bg:        $component-active-bg !default;
 //** Disabled dropdown menu item background color.
 $dropdown-link-disabled-color:   $text-color-lighter !default;
 
-//** Text color for headers within dropdown menus.
-$dropdown-header-color:          $text-color-darker !default;
-
-//** Deprecated `$dropdown-caret-color` as of v3.1.0
-$dropdown-caret-color:           #000 !default;
-
 //
 // Tables
 // --------------------------------------------------
 
-$table-cell-padding:            12px !default;
+$table-cell-padding:              24px !default;
+$table-title-padding-vertical:    8px !default;
+$table-cell-padding-vertical:     24px !default;
+$table-cell-padding-horizontal:   16px !default;
 //** Padding for cells in `.table-condensed`.
-$table-condensed-cell-padding:  5px !default;
+$table-condensed-cell-padding:  16px !default;
 //** Default background color used for all tables.
 $table-bg:                      transparent !default;
 //** Background color used for `.table-striped`.
@@ -253,6 +244,8 @@ $table-bg-hover:                $gray-bg-lighter !default;
 $table-bg-active:               $gray-bg-lighter !default;
 //** Border color for table and cell borders.
 $table-border-color:            $gray-bd;
+$table-title-color:             $text-color-lighter;
+$table-title-bg:                $gray-bg;
 
 //
 // Navs
@@ -262,6 +255,8 @@ $nav-tabs-border-width: 1px;
 $nav-tabs-border-color: $gray-bd;
 $nav-item-margin: 8px;
 $nav-link-padding: 16px;
+$nav-link-color: $text-color-lighter;
+$nav-link-active-color: $component-active-color;
 
 //== Progress bars
 // --------------------------------------------------

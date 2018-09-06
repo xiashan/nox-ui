@@ -34,11 +34,14 @@ input[type="search"] {
 }
 
 // Position radios and checkboxes better
+// 一般情况下行行高为20，所以margin-top: 2px
 input[type="radio"],
 input[type="checkbox"] {
-  margin: 4px 0 0;
+  margin: 2px 0 0;
   margin-top: 1px \9; // IE8-9
   line-height: normal;
+  width: 16px;
+  height: 16px;
 }
 
 input[type="file"] {
@@ -57,7 +60,7 @@ select[size] {
   height: auto;
 }
 
-// 去掉select chrom默认5px的border,但这样就不显示箭头了，所以TODO特别处理一下
+// 去掉select chrome默认5px的border,但这样就不显示箭头了，所以TODO特别处理一下
 select {
   -webkit-appearance: none;
 }
@@ -68,28 +71,6 @@ input[type="radio"]:focus,
 input[type="checkbox"]:focus {
   @include tab-focus;
 }
-
-// Common form controls
-//
-// Shared size and type resets for form controls. Apply `.form-control` to any
-// of the following form controls:
-//
-// select
-// textarea
-// input[type="text"]
-// input[type="password"]
-// input[type="datetime"]
-// input[type="datetime-local"]
-// input[type="date"]
-// input[type="month"]
-// input[type="time"]
-// input[type="week"]
-// input[type="number"]
-// input[type="email"]
-// input[type="url"]
-// input[type="search"]
-// input[type="tel"]
-// input[type="color"]
 
 .form-control {
   display: block;
@@ -140,7 +121,6 @@ textarea.form-control {
   height: auto;
 }
 
-
 // Search inputs in iOS
 //
 // This overrides the extra rounded corners on search inputs in iOS so that our
@@ -152,38 +132,6 @@ input[type="search"] {
   -webkit-appearance: none;
 }
 
-
-// Special styles for iOS temporal inputs
-//
-// In Mobile Safari, setting `display: block` on temporal inputs causes the
-// text within the input to become vertically misaligned. As a workaround, we
-// set a pixel line-height that matches the given height of the input, but only
-// for Safari. See https://bugs.webkit.org/show_bug.cgi?id=139848
-//
-// Note that as of 9.3, iOS doesn't support `week`.
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  input[type="date"],
-  input[type="time"],
-  input[type="datetime-local"],
-  input[type="month"] {
-    &.form-control {
-      line-height: $input-height-base;
-    }
-
-    &.input-sm,
-    .input-group-sm & {
-      line-height: $input-height-small;
-    }
-
-    &.input-lg,
-    .input-group-lg & {
-      line-height: $input-height-large;
-    }
-  }
-}
-
-
 // Form groups
 //
 // Designed to help with the organization and spacing of vertical forms. For
@@ -192,7 +140,6 @@ input[type="search"] {
 .form-group {
   margin-bottom: $form-group-margin-bottom;
 }
-
 
 // Checkboxes and radios
 //
@@ -207,7 +154,7 @@ input[type="search"] {
 
   label {
     min-height: $line-height-computed; // Ensure the input doesn't jump when there is no text
-    padding-left: 20px;
+    padding-left: 24px;
     margin-bottom: 0;
     font-weight: normal;
     cursor: pointer;
@@ -218,8 +165,8 @@ input[type="search"] {
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
   position: absolute;
-  margin-left: -20px;
-  margin-top: 4px \9;
+  margin-left: -24px;
+  margin-top: 2px \9;
 }
 
 .radio + .radio,
@@ -232,7 +179,7 @@ input[type="search"] {
 .checkbox-inline {
   position: relative;
   display: inline-block;
-  padding-left: 20px;
+  padding-left: 24px;
   margin-bottom: 0;
   vertical-align: middle;
   font-weight: normal;
@@ -275,6 +222,16 @@ input[type="checkbox"] {
   }
 }
 
+// disabled需要在外部加样式控制文本显示灰色
+.radio,
+.checkbox,
+.radio-inline,
+.checkbox-inline {
+  &.disabled {
+    color: #ccc;
+  }
+}
+
 
 // Static form control text
 //
@@ -298,13 +255,13 @@ input[type="checkbox"] {
 // The `.form-group-* form-control` variations are sadly duplicated to avoid the
 // issue documented in https://github.com/twbs/bootstrap/issues/15074.
 
-@include input-size('.input-sm', $input-height-small, $padding-small-vertical, $padding-input-horizontal-base, $font-size-base, $line-height-small, $input-border-radius);
+@include input-size('.input-sm', $input-height-small, $padding-small-vertical, $padding-input-horizontal-base, $font-size-base, $line-height-base, $input-border-radius);
 .form-group-sm {
   .form-control {
     height: $input-height-small;
     padding: $padding-small-vertical $padding-input-horizontal-base;
     font-size: $font-size-base;
-    line-height: $line-height-small;
+    line-height: $line-height-base;
     border-radius: $input-border-radius;
   }
   select.form-control {
@@ -317,9 +274,7 @@ input[type="checkbox"] {
   }
   .form-control-static {
     min-height: $input-height-small;
-    padding: $padding-small-vertical 0;
-    font-size: $font-size-base;
-    line-height: $line-height-small;
+    padding: ($padding-small-vertical + 1) 0;
   }
 }
 
@@ -331,7 +286,7 @@ input[type="checkbox"] {
 
 .help-block {
   display: block; // account for any element using help-block
-  margin-top: 5px;
+  margin-top: 4px;
   margin-bottom: 0;
   color: $text-color-lighter; // lighten the text some for contrast
   &.error {
@@ -377,7 +332,7 @@ input[type="checkbox"] {
   @media (min-width: $screen-sm-min) {
     .control-label {
       margin-bottom: 0;
-      padding-top: $padding-base-vertical; // Default padding plus a border
+      padding-top: $padding-base-vertical + 1; // Default padding plus a border
     }
   }
 
@@ -388,8 +343,17 @@ input[type="checkbox"] {
   .form-group-sm {
     @media (min-width: $screen-sm-min) {
       .control-label {
-        padding-top: $padding-small-vertical;
+        padding-top: $padding-small-vertical + 1;
         font-size: $font-size-base;
+      }
+
+      .radio,
+      .checkbox,
+      .radio-inline,
+      .checkbox-inline {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: ($padding-small-vertical + 1); // Default padding plus a border
       }
     }
   }

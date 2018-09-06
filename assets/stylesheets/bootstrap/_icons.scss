@@ -3,11 +3,11 @@
   // Import the fonts
   @font-face {
     font-family: 'icomoon';
-    src: url('#{$icon-font-path}#{$icon-font-name}.eot?m86qyo');
-    src: url('#{$icon-font-path}#{$icon-font-name}.eot?m86qyo#iefix') format('embedded-opentype'),
-         url('#{$icon-font-path}#{$icon-font-name}.ttf?m86qyo') format('truetype'),
-         url('#{$icon-font-path}#{$icon-font-name}.woff?m86qyo') format('woff'),
-         url('#{$icon-font-path}#{$icon-font-name}.svg?m86qyo#{$icon-font-svg-id}') format('svg');
+    src: url('#{$icon-font-path}#{$icon-font-name}.eot?tyga18');
+    src: url('#{$icon-font-path}#{$icon-font-name}.eot?tyga18#iefix') format('embedded-opentype'),
+         url('#{$icon-font-path}#{$icon-font-name}.ttf?tyga18') format('truetype'),
+         url('#{$icon-font-path}#{$icon-font-name}.woff?tyga18') format('woff'),
+         url('#{$icon-font-path}#{$icon-font-name}.svg?tyga18#{$icon-font-svg-id}') format('svg');
   }
 }
 
@@ -26,6 +26,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.nox-uplocal:before {
+  content: "\e960";
+}
 .nox-anchor:before {
   content: "\e900";
 }

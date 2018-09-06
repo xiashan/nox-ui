@@ -28,7 +28,7 @@
 
 .ui-select-choices-row:hover {
   background-color: #f7f8fa;
-  color: #247ddc;
+  //color: #247ddc;
 }
 
 /* Select2 theme */
@@ -351,8 +351,18 @@ body > .select2-container.open {
 }
 
 .select2-results .select2-highlighted {
-  background: #247ddc;
-  color: #fff;
+  //background: #247ddc;
+  //color: #fff;
+  color: #247ddc;
+  font-weight: 800;
+  position: relative;
+}
+.select2-results .select2-highlighted:after {
+  font-family: 'icomoon' !important;
+  content: "\e908";
+  position: absolute;
+  top: 6px;
+  right: 16px;
 }
 
 .select2-results .select2-no-results,

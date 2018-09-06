@@ -38,7 +38,7 @@
   &[disabled],
   fieldset[disabled] & {
     cursor: $cursor-disabled;
-    @include opacity(.65);
+    @include opacity(.5);
   }
 
   // [converter] extracted a& to a.btn
@@ -83,7 +83,7 @@ a.btn {
 }
 
 
-// Link buttons
+// Link buttons(使用比较少)
 // -------------------------
 
 // Make a button look and behave like a link
@@ -126,9 +126,9 @@ a.btn {
   position: relative;
   // 带图标
   i {
-    font-size: 24px;
+    font-size: 20px;
     position: absolute;
-    top: 7px;
+    top: 9px;
     & + span {
       margin-left: 32px;
       margin-right: 0;
@@ -151,9 +151,15 @@ a.btn {
   &.btn-icon {
     i {
       font-size: 24px;
-      top: 10px;
+      top: 11px;
+      & + span {
+        margin-left: 36px;
+        margin-right: 0;
+      }
     }
     span {
+      margin-left: 0;
+      margin-right: 36px;
       & + i {
         right: 40px;
       }
@@ -166,7 +172,7 @@ a.btn {
   &.btn-icon {
     i {
       font-size: 16px;
-      top: 6px;
+      top: 7px;
       & + span {
         margin-left: 24px;
         margin-right: 0;
